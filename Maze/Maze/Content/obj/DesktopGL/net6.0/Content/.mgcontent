@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/background.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/breadcrumb.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/end.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/player.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/robotoFont.spritefont</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/shortest.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/wallBottom.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/wallLeft.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/wallRight.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/wallTop.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

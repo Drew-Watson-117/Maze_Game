@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PKbWFBIJvWUO+kzGUGmgAKjnznG93pGAMZ8WCMQR2AUdNnisz5frAl5g/U7ujfnp+o/uqg1VzMyfJaJYcO55Hw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\drewz\\School_Stuff\\Spring_2024\\Game_Development\\Homework\\Project_2_Mono\\Maze\\Maze\\Maze.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\drewz\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\drewz\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}
