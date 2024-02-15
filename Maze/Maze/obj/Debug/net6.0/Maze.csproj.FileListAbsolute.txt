@@ -33,3 +33,4 @@ C:\Users\drewz\School_Stuff\Spring_2024\Game_Development\Homework\Project_2_Mono
 C:\Users\drewz\School_Stuff\Spring_2024\Game_Development\Homework\Project_2_Mono\Maze\Maze\bin\Debug\net6.0\Content\shortest.xnb
 C:\Users\drewz\School_Stuff\Spring_2024\Game_Development\Homework\Project_2_Mono\Maze\Maze\bin\Debug\net6.0\Content\end.xnb
 C:\Users\drewz\School_Stuff\Spring_2024\Game_Development\Homework\Project_2_Mono\Maze\Maze\bin\Debug\net6.0\Content\robotoFont.xnb
+C:\Users\drewz\School_Stuff\Spring_2024\Game_Development\Homework\Project_2_Mono\Maze\Maze\bin\Debug\net6.0\Content\fog.xnb

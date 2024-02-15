@@ -7,6 +7,7 @@
     <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/background.png</File>
     <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/breadcrumb.png</File>
     <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/end.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/fog.png</File>
     <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/player.png</File>
     <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/robotoFont.spritefont</File>
     <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/shortest.png</File>
@@ -16,6 +17,7 @@
     <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Project_2_Mono/Maze/Maze/Content/wallTop.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

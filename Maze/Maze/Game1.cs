@@ -35,6 +35,7 @@ namespace Maze
         bool showShortest = false;
         bool showBreadcrumbs = false;
         bool showHint = false;
+        bool showFog = false;
        
         
 
@@ -49,7 +50,9 @@ namespace Maze
         Texture2D breadcrumbTexture;
         Texture2D shortestTexture;
         Texture2D endTexture;
-        
+        Texture2D fogTexture;
+
+
 
         public Game1()
         {
@@ -69,6 +72,7 @@ namespace Maze
             showShortest = false;
             showBreadcrumbs = false;
             showHint = false;
+            showFog = false;
             // Set start and end of maze
             maze.setStart(0, 0);
             maze.setEnd(xDim - 1, yDim - 1);
@@ -105,6 +109,7 @@ namespace Maze
             breadcrumbTexture = Content.Load<Texture2D>("breadcrumb");
             shortestTexture = Content.Load<Texture2D>("shortest");
             endTexture = Content.Load<Texture2D>("end");
+            fogTexture = Content.Load<Texture2D>("fog");
             font = Content.Load<SpriteFont>("robotoFont");
         }
 
@@ -331,7 +336,11 @@ namespace Maze
                             Rectangle shortestRect = new Rectangle(mazeStartX + row * offset + rectSize / 2, mazeStartY + col * offset + rectSize / 2, rectSize, rectSize);
                             _spriteBatch.Draw(shortestTexture, shortestRect, Color.White);
                         }
-
+                        // Draw Fog
+                        if (showFog && (cell.x > player.cell.x + 1 || cell.x < player.cell.x - 1 || cell.y > player.cell.y + 1 || cell.y < player.cell.y - 1) && cell != maze.end)
+                        {
+                            _spriteBatch.Draw(fogTexture, cellRect, Color.White);
+                        }
 
                     }
                 }
@@ -433,6 +442,7 @@ namespace Maze
             _spriteBatch.DrawString(font, "B: Breadcrumbs", new Vector2(x, initialY + 10 * offset / 2), Color.Black);
             _spriteBatch.DrawString(font, "P: Shortest Path", new Vector2(x, initialY + 11 * offset / 2), Color.Black);
             _spriteBatch.DrawString(font, "H: Hint", new Vector2(x, initialY + 12 * offset / 2), Color.Black);
+            _spriteBatch.DrawString(font, "F: Fog of War", new Vector2(x, initialY + 13 * offset / 2), Color.Black);
 
 
         }
@@ -459,6 +469,8 @@ namespace Maze
             keyboard.registerCommand(Keys.H, true, new IInputDevice.CommandDelegate(toggleHint));
             keyboard.registerCommand(Keys.B, true, new IInputDevice.CommandDelegate(toggleBreadcrumbs));
             keyboard.registerCommand(Keys.P, true, new IInputDevice.CommandDelegate(toggleShortestPath));
+            keyboard.registerCommand(Keys.F, true, new IInputDevice.CommandDelegate(toggleFog));
+
 
             keyboard.registerCommand(Keys.F1, true, new IInputDevice.CommandDelegate(new5x5));
             keyboard.registerCommand(Keys.F2, true, new IInputDevice.CommandDelegate(new10x10));
@@ -477,6 +489,11 @@ namespace Maze
         void GotoCredits(GameTime gameTime, float value) 
         {
             screen = Screen.Credits;
+        }
+
+        void toggleFog(GameTime gameTime, float value) 
+        {
+            showFog = !showFog;
         }
 
         void new5x5(GameTime gameTime, float value)
