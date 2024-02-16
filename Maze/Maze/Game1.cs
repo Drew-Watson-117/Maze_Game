@@ -196,12 +196,17 @@ namespace Maze
                         font,
                         "Hungry Minotaur",
                         new Vector2(
-                             _graphics.PreferredBackBufferWidth / 2,
+                             _graphics.PreferredBackBufferWidth / 2 - font.MeasureString("Hungry Minotaur").X,
                              _graphics.PreferredBackBufferHeight / 4
                              ),
-                        Color.Black
+                        Color.Black,
+                        0,
+                        Vector2.Zero,
+                        2,
+                        SpriteEffects.None,
+                        0
                         );
-                DrawControls(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 4);
+                DrawControls(_graphics.PreferredBackBufferWidth / 2 - font.MeasureString("Hungry Minotaur").X, _graphics.PreferredBackBufferHeight / 4);
             }
             // High Score Drawing
             if (screen == Screen.HighScores) 
@@ -366,14 +371,14 @@ namespace Maze
                         Color.Black
                         );
                 // Draw Controls
-                DrawControls(mazeStartX + offset * xDim + 10, mazeStartY + offset * yDim / 4);
+                DrawControls(mazeStartX + offset * xDim + 10, mazeStartY);
             }
 
             _spriteBatch.End();
             base.Draw(gameTime);
         }
 
-        void DrawControls(int x, int initialY, int offset = 50)
+        void DrawControls(float x, float initialY, int offset = 50)
         {
             _spriteBatch.DrawString(
                         font,
