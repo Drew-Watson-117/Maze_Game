@@ -95,6 +95,7 @@ namespace Maze
             keyboard.registerCommand(Keys.F4, true, new IInputDevice.CommandDelegate(new20x20));
             keyboard.registerCommand(Keys.F5, true, new IInputDevice.CommandDelegate(GotoHighScores));
             keyboard.registerCommand(Keys.F6, true, new IInputDevice.CommandDelegate(GotoCredits));
+            keyboard.registerCommand(Keys.F7, true, new IInputDevice.CommandDelegate(newExplore));
         }
 
         public override void LoadContent(GraphicsDevice graphicsDevice)
@@ -254,6 +255,11 @@ namespace Maze
         void toggleShortestPath(GameTime gameTime, float value)
         {
             showShortest = !showShortest;
+        }
+
+        void newExplore(GameTime gameTime, float value)
+        {
+            nextState = State.Explore;
         }
 
         #endregion

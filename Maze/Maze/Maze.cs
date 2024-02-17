@@ -171,6 +171,7 @@ namespace Maze
 
         public Cell getCell(int x, int y)
         {
+            if (x < 0 || y < 0 || x >= xDim || y >= yDim) return null;
             return maze[x][y];
         }
 
@@ -219,7 +220,59 @@ namespace Maze
             this.end = cell;
         }
 
+        public bool neighborVisited(Cell cell)
+        {
+            // If top left
+            if (cell.x == 0 && cell.y == 0)
+            {
+                // Check right neighbor, bottom neighbor, bottom right
+                if (getRight(cell).visitedByPlayer || getBelow(cell).visitedByPlayer || getBelow(getRight(cell)).visitedByPlayer) return true;
+            }
+            // If top right
+            else if (cell.x == xDim - 1 && cell.y == 0)
+            {
+                if (getLeft(cell).visitedByPlayer || getBelow(cell).visitedByPlayer || getBelow(getLeft(cell)).visitedByPlayer) return true;
+            }
+            // If bottom left
+            else if (cell.x == 0 && cell.y == yDim - 1)
+            {
+                if (getRight(cell).visitedByPlayer || getAbove(cell).visitedByPlayer || getAbove(getRight(cell)).visitedByPlayer) return true;
+            }
+            // If bottom right
+            else if (cell.x == xDim - 1 && cell.y == yDim - 1)
+            {
+                // Check right neighbor, bottom neighbor, bottom right
+                if (getLeft(cell).visitedByPlayer || getAbove(cell).visitedByPlayer || getAbove(getLeft(cell)).visitedByPlayer) return true;
+            }
+            // If top
+            else if (cell.y == 0)
+            {
+                // Check all bottom neighbors, left and right
+                if (getLeft(cell).visitedByPlayer || getRight(cell).visitedByPlayer || getBelow(cell).visitedByPlayer || getBelow(getRight(cell)).visitedByPlayer || getBelow(getLeft(cell)).visitedByPlayer) return true;
+            }
+            // If bottom
+            else if (cell.y == yDim - 1)
+            {
+                // Check all above neighbors, left and right
+                if (getLeft(cell).visitedByPlayer || getRight(cell).visitedByPlayer || getAbove(cell).visitedByPlayer || getAbove(getRight(cell)).visitedByPlayer || getAbove(getLeft(cell)).visitedByPlayer) return true;
+            }
+            // If left
+            else if (cell.x == 0)
+            {
+                // Check all right neighbors, above and below
+                if (getAbove(cell).visitedByPlayer || getBelow(cell).visitedByPlayer || getRight(cell).visitedByPlayer || getAbove(getRight(cell)).visitedByPlayer || getBelow(getRight(cell)).visitedByPlayer) return true;
+            }
+            // If right
+            else if (cell.x == xDim - 1)
+            {
+                // Check all left neighbors, above and below
+                if (getAbove(cell).visitedByPlayer || getBelow(cell).visitedByPlayer || getLeft(cell).visitedByPlayer || getAbove(getLeft(cell)).visitedByPlayer || getBelow(getLeft(cell)).visitedByPlayer) return true;
+            }
+            // Else, check all
+            else if (getAbove(cell).visitedByPlayer || getBelow(cell).visitedByPlayer || getLeft(cell).visitedByPlayer || getAbove(getLeft(cell)).visitedByPlayer || getBelow(getLeft(cell)).visitedByPlayer || getRight(cell).visitedByPlayer || getAbove(getRight(cell)).visitedByPlayer || getBelow(getRight(cell)).visitedByPlayer) return true;
 
+            return false;
+        }
     }
 
     public class Cell 
@@ -266,7 +319,6 @@ namespace Maze
         {
             return this.y == height - 1;
         }
-
 
     }
 

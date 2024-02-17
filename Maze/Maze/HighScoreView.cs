@@ -38,6 +38,8 @@ namespace Maze
             keyboard.registerCommand(Keys.F4, true, new IInputDevice.CommandDelegate(new20x20));
             keyboard.registerCommand(Keys.F5, true, new IInputDevice.CommandDelegate(GotoHighScores));
             keyboard.registerCommand(Keys.F6, true, new IInputDevice.CommandDelegate(GotoCredits));
+            keyboard.registerCommand(Keys.F7, true, new IInputDevice.CommandDelegate(newExplore));
+
         }
 
         #region Input Handler Functions
@@ -69,6 +71,11 @@ namespace Maze
         void new20x20(GameTime gameTime, float value)
         {
             nextState = State.Game20x20;
+        }
+
+        void newExplore(GameTime gameTime, float value)
+        {
+            nextState = State.Explore;
         }
         #endregion
 

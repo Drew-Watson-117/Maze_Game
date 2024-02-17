@@ -9,16 +9,6 @@ using System.Threading.Tasks;
 namespace Maze
 {
 
-    public enum State
-    {
-        Menu,
-        HighScores,
-        Game5x5,
-        Game10x10,
-        Game15x15,
-        Game20x20,
-        Credits
-    }
     internal interface IGameState
     {
         public void Initialize();

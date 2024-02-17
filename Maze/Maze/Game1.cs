@@ -8,12 +8,16 @@ using System.Text.Encodings.Web;
 
 namespace Maze
 {
-    public enum Screen
+    public enum State
     {
         Menu,
         HighScores,
-        Game,
-        Credits
+        Game5x5,
+        Game10x10,
+        Game15x15,
+        Game20x20,
+        Credits,
+        Explore
     }
     public class Game1 : Game
     {
@@ -39,6 +43,7 @@ namespace Maze
                 {State.Game10x10, new MazeView(10,10,State.Game10x10,highScores,_graphics, Content) },
                 {State.Game15x15, new MazeView(15,15,State.Game15x15,highScores,_graphics, Content) },
                 {State.Game20x20, new MazeView(20,20,State.Game20x20,highScores,_graphics, Content) },
+                {State.Explore, new ExploreView(State.Explore,highScores,_graphics, Content) },
             };
 
             gameState = stateDict[State.Menu];
